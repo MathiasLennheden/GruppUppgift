@@ -1,6 +1,31 @@
 var ruta = document.getElementById("box");
 var ruta2 = document.getElementById("box2");
+var rad1 = document.getElementById("rad1");
+var rad2 = document.getElementById("rad2");
+var rad3 = document.getElementById("rad3");
+
+rad1.addEventListener("click",function(){
+rad1.style.backgroundColor="yellow";
+rad2.style.backgroundColor="white";
+rad3.style.backgroundColor="white";
+},false);
+
+rad2.addEventListener("click",function(){
+    rad1.style.backgroundColor="white";
+    rad2.style.backgroundColor="yellow";
+    rad3.style.backgroundColor="white";
+},false);
+
+rad3.addEventListener("click",function(){
+    rad1.style.backgroundColor="white";
+    rad2.style.backgroundColor="white";
+    rad3.style.backgroundColor="yellow";
+},false);
+
+
+
 var nr = 0;
+
  ruta.addEventListener("click",function()
 { 
     if(nr == 0){
@@ -24,7 +49,7 @@ function getRandomColor () {
  
   }
  
-  window.addEventListener("keydown",function(){
+/*   window.addEventListener("keydown",function(){
     var key = event.keyCode;
     var alfa;
     switch (key) {
@@ -34,10 +59,11 @@ function getRandomColor () {
         case 27:
             alfa = "ESC";
             break;
-        default:
-            alfa = String.fromCharCode(key);
+        default: alfa = String.fromCharCode(key);
     }
-});
+    ruta.innerHTML+="Du tryckte på"+alfa+"<br>";
+}); */
+
 
 
 ruta2.addEventListener("mouseover",function(){
@@ -49,7 +75,79 @@ ruta2.addEventListener("mouseover",function(){
 ruta2.addEventListener("mouseout",function(){
     ruta2.style.backgroundColor="white";
     ruta2.style.color="black";
-    ruta2.innerHTML="<h1>Try to hover over this</h1>"
+    ruta2.innerHTML="<h1 >Try to hover over this</h1>"
 },false);
 
+
+canvas = document.getElementById("canvas");
+c = canvas.getContext("2d");
+
+//variabler som används inom diverse funktioner
+var pos;   //position
+var klottra = false;
+var lw=1; //lineWidth
+
+window.addEventListener("keydown",function()
+{
+	key=event.keyCode;
+	if(key==38) lw=lw+1;
+	if(key==40 && lw>1) lw=lw-1;
+});
+
+canvas.addEventListener("mousedown",function(evt)
+{
+	//börja rita
+	klottra=true;  //ok att börja rita
+	pos=mPos(evt);  //hämta in som en array med x och y position
+
+	c.moveTo(pos.x,pos.y);  //börja linjen
+},false);
+canvas.addEventListener("mouseup",function(evt)
+{
+	//sluta rita när man inte håller ner vänsterklick
+
+	klottra = false;
+},false);
+
+canvas.addEventListener("mousemove",function(evt)
+{
+    //rita
+	if(klottra)
+	{
+        pos=mPos(evt);
+        c.lineTo(pos.x,pos.y);
+        c.lineWidth=lw;
+        c.strokeStyle="black";
+        c.stroke();
+	}
+
+
+},false);
+
+function mPos(evt) {     //mousePosition
+
+    var rek = canvas.getBoundingClientRect();
+    return {
+        x: evt.clientX - rek.left,
+    	y: evt.clientY - rek.top
+			};
+};
+
+
+
+var ruta3 = document.getElementById("box3");
+window.addEventListener("keydown",random_bg_color);
+
+
+function random_bg_color() {
+	
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  
+    ruta3.style.background = bgColor;
+    }
+
+random_bg_color();
 

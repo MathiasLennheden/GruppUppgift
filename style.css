@@ -1,12 +1,14 @@
 header{
     text-align: center;
     height: auto;
-   width: auto;
+    width: auto;
     margin: 15px;
     padding: 5px;
     border: 5px solid black;
 }
 html, body{
+    
+    
     height: 100%;
     margin: 0;
 }
@@ -25,6 +27,16 @@ html, body{
     height: 15%;
     border: 1px solid #000;
 }
+#box3{
+    width:50%;
+    margin-top: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    height: 15%;
+    border: 1px solid #000;
+}
+
 .h1{
     text-align: center;
 }
+
