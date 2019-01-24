@@ -1,3 +1,4 @@
+
 header{
     text-align: center;
     height: auto;
@@ -26,6 +27,7 @@ html, body{
     margin-right:auto;
     height: 15%;
     border: 1px solid #000;
+    text-align: center;
 }
 #box3{
     width:50%;
@@ -39,4 +41,8 @@ html, body{
 .h1{
     text-align: center;
 }
-
+.canvas{
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: 5px;
+}

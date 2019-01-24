@@ -1,3 +1,4 @@
+
 var ruta = document.getElementById("box");
 var ruta2 = document.getElementById("box2");
 var rad1 = document.getElementById("rad1");
@@ -69,13 +70,14 @@ function getRandomColor () {
 ruta2.addEventListener("mouseover",function(){
     ruta2.style.backgroundColor="red";
     ruta2.style.color="white";
+    
     ruta2.innerHTML="<h1>Mouseover</h1>"
 },false);
 
 ruta2.addEventListener("mouseout",function(){
-    ruta2.style.backgroundColor="white";
+    ruta2.style.backgroundColor="green";
     ruta2.style.color="black";
-    ruta2.innerHTML="<h1 >Try to hover over this</h1>"
+    ruta2.innerHTML="<h1>Mouseout</h1>"
 },false);
 
 
