@@ -49,7 +49,17 @@ html, body{
    
     
 }
+.button{
+border: 5px solid red;
+-webkit-appearance: button;
+-moz-appearance: button;
 
+background-color: white;
+text-decoration-color: firebrick;
+padding: 0;
+margin: auto;
+display: block;
+}
 .text-mitten{
     
 text-align: center;

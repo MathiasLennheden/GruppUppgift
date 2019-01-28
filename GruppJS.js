@@ -44,13 +44,11 @@ var nr = 0;
 
 //funktion för att slumpa färg
 function getRandomColor () {
-    for(var i = 0; i<1; i++){
-
-        var hex = Math.floor(Math.random() * 0xFFFFFF); 
-    }
-        
-        return "#" + ("000000" + hex.toString(16)).substr(-6);
- 
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ return bgColor;
   }
  
 /*   window.addEventListener("keydown",function(){
@@ -121,11 +119,13 @@ canvas.addEventListener("mousemove",function(evt)
     //rita
 	if(klottra)
 	{
+        
         pos=mPos(evt);
         c.lineTo(pos.x,pos.y);
         c.lineWidth=lw;
         c.strokeStyle="black";
         c.stroke();
+        
 	}
 
 
@@ -143,20 +143,12 @@ function mPos(evt) {     //mousePosition
 
 //Ruta3 som gör att när du trycker ner en valfri tangent så ändras färgen i rutan
 var ruta3 = document.getElementById("box3");
-window.addEventListener("keydown",random_bg_color);
+window.addEventListener("keydown",function(){
+    ruta3.style.backgroundColor = getRandomColor();
+}),false
 
 
-function random_bg_color() {
-	
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-  
-    ruta3.style.background = bgColor;
-    }
 
-random_bg_color();
 
 //funktion för att skicka alert när ett värde ändras
 function ourFunction(inmatning){
@@ -167,4 +159,15 @@ function ourFunction(inmatning){
 //funktion för onload event
 function myFunction(){
     alert("Hej och välkomna till leklandet");
+}
+
+//funktion för att rensa canvas-rutan 
+function rensa(){
+    
+    
+    c.beginPath();
+    c.fillStyle="white";
+    c.fillRect(0,0,canvas.width, canvas.height);
+    c.closePath();
+    
 }

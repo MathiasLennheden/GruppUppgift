@@ -25,14 +25,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item ">
-              <a class="nav-link" href="index.Html">Startsida <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="onload.html">Onload <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="lekaMedJS.html">LekaMedJavascript</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+                About Javascript Events
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action</a>
@@ -42,7 +42,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
+              <a class="nav-link disabled" href="AboutJavascriptEvents.html">About</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -52,13 +52,16 @@
         </div>
       </nav>
   <br>
+
   <div class="meddelande">
   <p class="text-mitten">Skriv vad du vill i textfältet så kommer du få ett meddelande när du lämnar textfältet!</p>
          <p class="text-mitten">Skriv vad du vill:</p>  <input class="meddelande" type="text" name="txt" value="Hejsvejs" onchange="ourFunction(this.value)" >
         </div>
   <br> 
 
-   <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas>
+   <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas> 
+   <button onclick="rensa()" class="button">Tryck här om du vill rensa rutan ovan</button>
+     
 
     <br>
 
