@@ -171,3 +171,4 @@ function rensa(){
     c.closePath();
     
 }
+
