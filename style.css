@@ -7,11 +7,12 @@ header{
     padding: 5px;
     border: 5px solid black;
 }
-html, body{
+body{
     
     
     height: 100vh;
     margin: 0;
+    padding-top: 45px;
 }
 #box{
       width:50%;
