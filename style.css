@@ -7,6 +7,7 @@ header{
     padding: 5px;
     border: 5px solid black;
 }
+
 body{
     
     
@@ -69,6 +70,11 @@ display: block;
 .text-mitten{
 text-align: center;
 }
+.text-startsida{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
 .meddelande{
     padding: 0;
     margin: auto;
@@ -81,6 +87,9 @@ text-align: center;
 @media (max-width: 768px){
     .göm {
 display: none;
+    }
+    .grid-container{
+        border: 5px solid black;
     }
     .p3{
         padding: 15px;
@@ -100,7 +109,8 @@ display: none;
         display: inline-grid;
         border: 5px solid black;
         padding: 10px;
-        grid-gap: 10px;
+        
+        grid-gap: 10px ;
         grid-template-columns: auto auto;
     } 
     .grid-item{
