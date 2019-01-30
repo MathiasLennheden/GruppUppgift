@@ -16,7 +16,7 @@
         <h1>Javascript Events</h1>
     </header>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="index.Html">Startsida</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,27 +37,40 @@
         </div>
       </nav>
   <br>
+  <hr class="hr" >
+  <h4 class="text-mitten" style="color:RED">Keydown och onChange event</h4>
 
+  <div id="box3"><h3 class="text-mitten">Tryck på en tangent</h3></div>
   <div class="meddelande">
-  <p class="text-mitten">Skriv vad du vill i textfältet så kommer du få ett meddelande när du lämnar textfältet!</p>
+  <h4 class="text-mitten">Skriv vad du vill i textfältet så kommer du få ett meddelande när du lämnar textfältet!</h4>
          <p class="text-mitten">Skriv vad du vill:</p>  <input class="meddelande" type="text" name="txt" value="Hejsvejs" onchange="ourFunction(this.value)" >
         </div>
-  <br> 
+
+        <hr class="hr" >
+
   <div class="göm">
-    
+    <h4 class="text-mitten" style="color:RED">Mousedown och Mouseup event</h4>
     <p class="text-mitten">Vill du rita kan du göra det här</p> <canvas class="canvas" id="canvas"  width="300" height="200" style="border: solid 1px #000"></canvas> 
     <button onclick="rensa()" class="button">Tryck här om du vill rensa rutan ovan</button>
     
-    <br>
+    
+    <hr class="hr" >
+    <h4 class="text-mitten" style="color:RED">Keydown och Keyup event</h4>
+    <p class="text-mitten">Tryck eller håll ner höger eller vänster piltangent</p>
+    <canvas class="canvas1" id="canvas1"  width="600" height="400" style="border: solid 5px #000"></canvas>
+    
+    <hr class="hr" >
   </div>
-
+  <h4 class="text-mitten" style="color:RED">Click event</h4>
     <p class="text-mitten" id="rad1">Tryck här så blir det gult men vitt på de andra raderna</p>
     <p class="text-mitten" id="rad2">Tryck här så blir det gult men vitt på de andra raderna</p>
     <p class="text-mitten" id="rad3">Tryck här så blir det gult men vitt på de andra raderna</p>
     <div id="box"><h3 class="text-mitten">Klicka på mig</h3></div>
+    <h4 class="text-mitten" style="color:RED">Mouseover och Mouseout event</h4>
     <div id="box2"><h3 class="text-mitten">Håll musen över boxen</h3></div>
-    <div id="box3"><h3 class="text-mitten">Tryck på en tangent</h3></div>
-   
+    
+    
+
     <script src="GruppJS.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
