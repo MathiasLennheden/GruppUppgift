@@ -96,7 +96,10 @@ display: none;
     }
     .rubrik{
         padding: 15px;
+        padding-top: 50px;
+        margin-top: -50px;
     }
+    
   }
 
 
@@ -119,3 +122,5 @@ display: none;
         width: 100%;
     }
 }
+
+
