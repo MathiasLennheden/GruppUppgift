@@ -5,16 +5,25 @@ header{
     width: auto;
     margin: 15px;
     padding: 5px;
-    border: 5px solid black;
+    border: 5px solid #000000;
+    background-color: #ffa500;
 }
 
 body{
-    
-    
     height: 100vh;
     margin: 0;
     padding-top: 45px;
 }
+.body{
+    background-color: #adff2f;
+}
+
+.body1{
+    background-color:  #c0c0c0;
+}
+
+
+
 #box{
       width:50%;
       margin-left:auto;
@@ -57,12 +66,12 @@ body{
     background-color: #ffffff; 
 }
 .button{
-border: 5px solid red;
+border: 5px solid #ff0000;
 -webkit-appearance: button;
 -moz-appearance: button;
 
-background-color: white;
-text-decoration-color: firebrick;
+background-color: #ffffff;
+text-decoration-color: #b22222;
 padding: 0;
 margin: auto;
 display: block;
@@ -81,15 +90,17 @@ text-align: center;
     display: block;
     
 }
-.body{
-    background-color: greenyellow;
-}
+
 @media (max-width: 768px){
     .göm {
 display: none;
     }
     .grid-container{
-        border: 5px solid black;
+        border: 5px solid #000000;
+        background-color: #ffa500;
+    }
+    .grid-item{
+        border: 2px solid #000000;
     }
     .p3{
         padding: 15px;
@@ -99,28 +110,81 @@ display: none;
         padding-top: 50px;
         margin-top: -50px;
     }
-    
+    .text-startsida{
+        text-align: left;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
   }
+  .bildStorlek{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 
 .hr{
-    border: 5px solid black;
+    border: 7px solid #000000;
 }
  @media (min-width: 769px){
     .grid-container {
         
         display: inline-grid;
-        border: 5px solid black;
+        border: 5px solid #000000;
         padding: 10px;
         
         grid-gap: 10px ;
         grid-template-columns: auto auto;
     } 
     .grid-item{
-        border: 2px solid black;
+        border: 2px solid #000000;
         padding: 5px;
         width: 100%;
+        background-color: #ffa500;
     }
 }
 
 
+/* h1 {
+    display:inline-block;
+    font-size: 1rem;
+    background: linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+} */
+
+
+/*
+Aktivera detta nedanför om du vill ha animerad regnbågsfärgad text
+*/
+ /* .h11 {
+    display:inline-block;
+    font-size: 1rem;
+    background: linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+
+    -webkit-animation: rainbowanim 2s ease infinite;
+       -moz-animation: rainbowanim 2s ease infinite;
+            animation: rainbowanim 2s ease infinite;
+}
+
+@-webkit-keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes rainbowanim {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes rainbowanim { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+} */
+ 

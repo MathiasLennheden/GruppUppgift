@@ -92,13 +92,13 @@ var pos;   //position
 var klottra = false;
 var lw=1; //lineWidth
 
-window.addEventListener("keydown",function()
+/* window.addEventListener("keydown",function()
 {
 	key=event.keyCode;
 	if(key==38) lw=lw+1;
 	if(key==40 && lw>1) lw=lw-1;
 });
-
+ */
 canvas.addEventListener("mousedown",function(evt)
 {
 	//börja rita
@@ -114,6 +114,7 @@ canvas.addEventListener("mouseup",function(evt)
 	klottra = false;
 },false);
 
+
 canvas.addEventListener("mousemove",function(evt)
 {
     //rita
@@ -127,8 +128,6 @@ canvas.addEventListener("mousemove",function(evt)
         c.stroke();
         
 	}
-
-
 },false);
 
 function mPos(evt) {     //mousePosition
@@ -176,13 +175,22 @@ canvas1 =document.getElementById("canvas1");
 c1 = canvas1.getContext("2d");
 
 var xpos = 300;
+var img1 = new Image();
+img1.src = "Images/overworld_bg.png";   //bakgrundsbild
+img1.onload = function()
+{
+    //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
+    c1.drawImage(img1,0,0,600,400 );
+};
+
+var xpos = 300;
 var frame = 96;  //bildruta kommer att förändras med 32 varje gång
 var img = new Image();
-img.src = "mario1.png";
+img.src = "Images/mario1.png";
 img.onload = function()
 {
     //drawImage(bild, x-start, y-start, bredd, höjd, x-position där bilden ska visas, y-position där bilden ska visas, bredd, höjd)
-    c1.drawImage(img,frame,0,32,64,xpos,200,32,64);
+    c1.drawImage(img,frame,0,32,64,xpos,275,32,64);
 };
 
 c1.moveTo(0,264);
@@ -207,7 +215,8 @@ window.addEventListener("keydown",function()
 window.addEventListener("keyup",function()
 {
     sudda();
-    c1.drawImage(img,96,0,32,64,xpos,200,32,64);
+    c1.drawImage(img1,0,0,600,400 );
+    c1.drawImage(img,96,0,32,64,xpos,275,32,64);
 },false);
 
 function sudda()
@@ -221,7 +230,8 @@ function sudda()
 function left()
 {
     sudda();
-    c1.drawImage(img,0+frame,0,32,64,xpos,200,32,64);
+    c1.drawImage(img1,0,0,600,400 );
+    c1.drawImage(img,0+frame,0,32,64,xpos,275,32,64);
     var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
     frame = 32*(Math.floor(nu/100)%3);
     xpos -=25;
@@ -232,11 +242,11 @@ function left()
 function right()
 {
     sudda();
-    c1.drawImage(img,192-frame,0,32,64,xpos,200,32,64);
+    c1.drawImage(img1,0,0,600,400 );
+    c1.drawImage(img,192-frame,0,32,64,xpos,275,32,64);
     var nu = new Date().valueOf(); // ValueOf = Tid i millisekunder
     frame = 32*(Math.floor(nu/100)%3);
     xpos +=25;
     if(xpos > 640) xpos = -40;
 
 }
-
