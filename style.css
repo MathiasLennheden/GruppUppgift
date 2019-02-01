@@ -134,8 +134,9 @@ display: none;
         border: 5px solid #000000;
         padding: 10px;
         
+        
         grid-gap: 10px ;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto 50%;
     } 
     .grid-item{
         border: 2px solid #000000;
@@ -146,25 +147,26 @@ display: none;
 }
 
 
-/* h1 {
+ h1 {
     display:inline-block;
     font-size: 1rem;
     background: linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 100% 200%;
-} */
+} 
 
 
 /*
 Aktivera detta nedanför om du vill ha animerad regnbågsfärgad text
 */
- /* .h11 {
+  .h11 {
     display:inline-block;
     font-size: 1rem;
     background: linear-gradient(45deg,#FF0000,#FF7F00,#FFFF00,#00FF00,#0000FF,#4B0082,#8B00FF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+   
     background-size: 400% 400%;
 
     -webkit-animation: rainbowanim 2s ease infinite;
@@ -186,5 +188,7 @@ Aktivera detta nedanför om du vill ha animerad regnbågsfärgad text
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
-} */
+} 
+
+
  
